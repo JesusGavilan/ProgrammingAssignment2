@@ -1,7 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Create the special vector with the content
+## of the matrix and the method set,get,
+## setinverse, getinverse
 
-## Write a short comment describing this function
+## Gettters and setters of the matrix
+## Getters and setters of the inversed
+## matrix.
 
 makeCacheMatrix <- function(x = matrix()) {
 	i <- NULL
@@ -14,11 +17,16 @@ makeCacheMatrix <- function(x = matrix()) {
 	getinverse <- function() i
 	list( set = set, get = get,
 		setinverse = setinverse,
-		getinverse = setinverse)
+		getinverse = getinverse)
 }
 
 
-## Write a short comment describing this function
+## Get the matrix, get the inverse.
+## In case was previouly calculated
+## it returns the inverse stored.
+## Otherwise it calculates the inverse
+## with solve() function and stored the
+## result.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
